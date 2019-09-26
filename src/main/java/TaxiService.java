@@ -11,11 +11,9 @@ class TaxiService {
                 cost = Constants.LANDING_AMOUNT_IN_RUBLES + distance * Constants.COST_OF_1_KM;
                 cost -= calculateDiscount(cost);
             }else {
-                errorMessage();
-                System.exit(-1);
+                cost = 0;
             }
         } catch (Exception e) {
-            errorMessage();
             e.printStackTrace();
         }
     }
@@ -26,10 +24,6 @@ class TaxiService {
 
     private boolean checkDistance(int distance) {
         return distance >= 0;
-    }
-
-    private void errorMessage() {
-        System.err.println("Enter correct int value >= 0");
     }
 
     private int calculateDiscount(int cost) {
