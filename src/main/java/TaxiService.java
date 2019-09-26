@@ -1,25 +1,30 @@
 import java.util.Scanner;
 
 class TaxiService {
-    private int cost;
+    private int distance;
 
-    void calculate() {
+    void initDistance() {
         System.out.println("Enter a distance in kilometers");
-        try (Scanner scanner = new Scanner(System.in)) {
-            int distance = scanner.nextInt();
-            if (checkDistance(distance)) {
+        try (Scanner scanner = new Scanner(System.in)){
+            distance = scanner.nextInt();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private int calculate() {
+        int cost;
+        if (checkDistance(distance)) {
                 cost = Constants.LANDING_AMOUNT_IN_RUBLES + distance * Constants.COST_OF_1_KM;
                 cost -= calculateDiscount(cost);
             }else {
                 cost = 0;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            return cost;
     }
 
     void show() {
-        System.out.println(cost);
+        System.out.println(calculate());
     }
 
     private boolean checkDistance(int distance) {
