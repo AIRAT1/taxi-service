@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 class TaxiService {
     int calculate(int dist) {
         int cost;
