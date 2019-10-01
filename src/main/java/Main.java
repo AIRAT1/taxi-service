@@ -1,3 +1,4 @@
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Main {
@@ -11,7 +12,7 @@ public class Main {
 
     private static void enterDistance() {
         System.out.println("Enter a distance in kilometers");
-        try (Scanner scanner = new Scanner(System.in)){
+        try (Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8)){
             distance = scanner.nextInt();
         }catch (Exception e) {
             e.printStackTrace();
