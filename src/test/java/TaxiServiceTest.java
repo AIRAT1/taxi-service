@@ -13,10 +13,18 @@ class TaxiServiceTest {
 
     @Test
     @DisplayName("Should calculate cost with correct entered values")
-    void calculateMore() {
+    void calculateMore1() {
         TaxiService service = new TaxiService();
         int calculateValue = service.calculate(50);
         assertEquals(1007, calculateValue);
+    }
+
+    @Test
+    @DisplayName("Should calculate cost with correct entered values")
+    void calculateMore2() {
+        TaxiService service = new TaxiService();
+        int calculateValue = service.calculate(10);
+        assertEquals(260, calculateValue);
     }
 
     @Test
