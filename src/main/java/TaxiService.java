@@ -1,5 +1,5 @@
 class TaxiService {
-    int calculate(int dist) {
+    public int calculate(int dist) {
         if (checkDistance(dist)) {
                 int cost = Constants.LANDING_AMOUNT_IN_RUBLES + dist * Constants.COST_OF_1_KM;
                 cost -= calculateDiscount(cost);
