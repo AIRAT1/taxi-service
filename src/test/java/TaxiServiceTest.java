@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TaxiServiceTest {
     @Test
-    @DisplayName("Should calculate cost with correct entered values")
+    @DisplayName("Must calculate the cost with the highest possible discount")
     void calculate() {
         TaxiService service = new TaxiService();
         int calculateValue = service.calculate(100);
@@ -12,7 +12,7 @@ class TaxiServiceTest {
     }
 
     @Test
-    @DisplayName("Should calculate cost with correct entered values")
+    @DisplayName("Must calculate discount price")
     void calculateMore1() {
         TaxiService service = new TaxiService();
         int calculateValue = service.calculate(50);
@@ -20,7 +20,7 @@ class TaxiServiceTest {
     }
 
     @Test
-    @DisplayName("Should calculate cost with correct entered values")
+    @DisplayName("Must calculate cost without discount")
     void calculateMore2() {
         TaxiService service = new TaxiService();
         int calculateValue = service.calculate(10);
