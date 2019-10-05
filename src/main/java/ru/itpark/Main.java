@@ -1,3 +1,5 @@
+package ru.itpark;
+
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 

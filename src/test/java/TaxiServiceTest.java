@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import ru.itpark.TaxiService;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TaxiServiceTest {
