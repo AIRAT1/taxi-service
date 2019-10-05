@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TaxiServiceTest {
     @Test
     @DisplayName("Must calculate the cost with the highest possible discount")
-    void calculate() {
+    void calculateHighestPossibleDiscount() {
         TaxiService service = new TaxiService();
         int calculateValue = service.calculate(100);
         assertEquals(1960, calculateValue);
@@ -13,7 +13,7 @@ class TaxiServiceTest {
 
     @Test
     @DisplayName("Must calculate discount price")
-    void calculateMore1() {
+    void calculateWithDiscount() {
         TaxiService service = new TaxiService();
         int calculateValue = service.calculate(50);
         assertEquals(1007, calculateValue);
@@ -21,7 +21,7 @@ class TaxiServiceTest {
 
     @Test
     @DisplayName("Must calculate cost without discount")
-    void calculateMore2() {
+    void calculateWithoutDiscount() {
         TaxiService service = new TaxiService();
         int calculateValue = service.calculate(10);
         assertEquals(260, calculateValue);
