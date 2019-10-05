@@ -1,3 +1,5 @@
+package ru.itpark;
+
 public class Constants {
     public static final int LANDING_AMOUNT_IN_RUBLES = 60;
     public static final int COST_OF_1_KM = 20;
