@@ -2,13 +2,13 @@ package ru.itpark;
 
 public class TaxiService {
     public int calculate(int dist) {
-        if (checkDistance(dist)) {
-                int cost = Constants.LANDING_AMOUNT_IN_RUBLES + dist * Constants.COST_OF_1_KM;
-                cost -= calculateDiscount(cost);
-                return cost;
-            }else {
-                return 0;
-            }
+        if (!checkDistance(dist)) {
+            return 0;
+        }
+
+        int cost = Constants.LANDING_AMOUNT_IN_RUBLES + dist * Constants.COST_OF_1_KM;
+        cost -= calculateDiscount(cost);
+        return cost;
     }
 
     private boolean checkDistance(int distance) {
