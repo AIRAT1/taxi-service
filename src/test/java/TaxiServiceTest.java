@@ -28,7 +28,7 @@ class TaxiServiceTest {
     }
 
     @Test
-    @DisplayName("Should calculate cost with incorrect entered values")
+    @DisplayName("Should return 0 for incorrect values")
     void calculateIncorrectValue() {
         TaxiService service = new TaxiService();
         int calculate = service.calculate(-5);
