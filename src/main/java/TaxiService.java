@@ -1,13 +1,12 @@
 class TaxiService {
     int calculate(int dist) {
-        int cost;
         if (checkDistance(dist)) {
-                cost = Constants.LANDING_AMOUNT_IN_RUBLES + dist * Constants.COST_OF_1_KM;
+                int cost = Constants.LANDING_AMOUNT_IN_RUBLES + dist * Constants.COST_OF_1_KM;
                 cost -= calculateDiscount(cost);
+                return cost;
             }else {
-                cost = 0;
+                return 0;
             }
-            return cost;
     }
 
     private boolean checkDistance(int distance) {
